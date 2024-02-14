@@ -22,6 +22,8 @@ app.post('/card/add',(req,res)=>{
 app.get('/card/get',(req,res)=>{
 
 })
+
+
 app.put('/card/update',(req,res)=>{
   const payload = req.body;
   const parsepayload = UpdateCard.safeParse(payload);
@@ -31,6 +33,7 @@ app.put('/card/update',(req,res)=>{
     })
     return
    }
+
 
 })
 
@@ -44,6 +47,7 @@ app.delete('/card/delete',(req,res)=>{
     })
     return
    }
+   
 })
 
 
