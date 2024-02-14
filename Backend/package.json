@@ -1,0 +1,16 @@
+{
+  "name": "bussinesscard-backend",
+  "version": "1.0.0",
+  "description": "A simple backend that store bussiness cards",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Santosh",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "zod": "^3.22.4"
+  }
+}
