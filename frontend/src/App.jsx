@@ -2,24 +2,20 @@ import './index.css';
 // import './App.css'
 import CreateCard from './components/CreateCard'
 import Cards from './components/Cards';
+import { useEffect, useState } from 'react';
 
 function App() {
-  const cards=[
-    {
-      name:"snatosh",
-      description: "sdlkfjslajfjdsfjksfjk",
-      interest:["football", "cricket"],
-      linkedin: "url",
-      twitter: "url2"
-    },
-    {
-      name:"snatosh1",
-      description: "sdlkfjslajfjdsfjksfjk",
-      interest:["football1", "cricket1"],
-      linkedein: "url",
-      twitter: "url2"
+  const [cards, setcards] = useState([]);
+  
+  useEffect(() => {
+    const fetchdata = async()=>{
+      const response = await fetch("http://localhost:3000/card/get")
+      const result = await response.json()
+      setcards(result.cards)
     }
-  ]
+    fetchdata()
+  }, [])
+  
 
   return (
     <div className='w-full flex justify-center bg-[#A8DADC]'>

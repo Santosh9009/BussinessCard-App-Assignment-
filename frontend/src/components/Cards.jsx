@@ -9,7 +9,7 @@ function Cards({ cards }) {
           <p className='font-medium'>{element.description}</p>
           <ul>
             <h2 className='mb-2 font-semibold'>Interests:</h2>
-            {element.interest && element.interest.map((interest, i) => (
+            {element.interests && element.interests.map((interest, i) => (
               <li key={i}>{interest}</li>
             ))}
           </ul>
@@ -35,7 +35,8 @@ Cards.propTypes = {
   cards: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string.isRequired,
-      interest: PropTypes.arrayOf(PropTypes.string).isRequired,
+      description: PropTypes.string.isRequired,
+      interests: PropTypes.arrayOf(PropTypes.string).isRequired,
       linkedin: PropTypes.string.isRequired,
       twitter: PropTypes.string.isRequired
     })

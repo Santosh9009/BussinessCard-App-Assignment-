@@ -5,7 +5,7 @@ mongoose.connect('mongodb+srv://Santosh:Santosh%4063711@cluster0.cmycynz.mongodb
 
 const CardSchema = new mongoose.Schema({
   name : String,
-  descripttion : String,
+  description : String,
   interests : [String],
   linkedin : String,
   twitter : String,

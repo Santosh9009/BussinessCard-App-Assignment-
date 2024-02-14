@@ -3,8 +3,10 @@ const app = express();
 const port = 3000;
 const {CreateCard, UpdateCard} = require('./types')
 const {Card} = require('./db');
+const cors = require('cors');
 
 app.use(express.json());
+app.use(cors());
 
 
 app.post('/card/add',async(req,res)=>{
@@ -36,7 +38,7 @@ app.get('/card/get',async(req,res)=>{
   const cards =await Card.find({});
 
   res.status(200).json({
-    cards: cards
+    cards
   })
 })
 
