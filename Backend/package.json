@@ -13,5 +13,8 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.1.2",
     "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
   }
 }

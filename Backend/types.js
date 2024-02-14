@@ -3,7 +3,7 @@ const zod = require('zod')
 const CreateCard = zod.object({
   name : zod.string(),
   description : zod.string(),
-  interest : zod.array(),
+  interests : zod.array(zod.string()),
   linkedin : zod.string(),
   twitter : zod.string()
 })
