@@ -2,15 +2,15 @@ import PropTypes from 'prop-types';
 
 function Cards({ cards }) {
   return (
-    <div className='w-full flex text-white font-mono'>
+    <div className='w-full flex flex-wrap text-white font-black'>
       {cards && cards.map((element, index) => (
-        <div className='flex flex-col gap-5 bg-[#201E1F] mr-8 p-6 pr-32 rounded' key={index}>
+        <div className='w-[30%] flex flex-col gap-4 bg-[#201E1F] mr-5 mt-5 p-6 rounded' key={index}>
           <h1 className='text-xl font-semibold'>{element.name}</h1>
           <p className='font-medium'>{element.description}</p>
           <ul>
-            <h2 className='mb-2 font-semibold'>Interests:</h2>
+            <h2 className='mb-2 font-semibold text-lg'>Interests:</h2>
             {element.interests && element.interests.map((interest, i) => (
-              <li key={i}>{interest}</li>
+              <li className='font-medium' key={i}>{interest}</li>
             ))}
           </ul>
           <div className="flex space-x-4">
