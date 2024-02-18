@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express();
-const port = 3000;
+const port = 3001;
 const {CreateCard, UpdateCard} = require('./types')
 const {Card} = require('./db');
 const cors = require('cors');

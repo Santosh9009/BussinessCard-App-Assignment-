@@ -1,7 +1,8 @@
-// eslint-disable-next-line no-unused-vars
-import React, { useState } from "react";
+import { useState } from "react";
 
-export default function CreateCard() {
+
+// eslint-disable-next-line react/prop-types
+const CreateCard=({fetchdata})=> {
   const [name, setName]= useState('');
   const [description, setDescription]= useState('');
   const [linkedin, setLinkedin] = useState('');
@@ -10,7 +11,7 @@ export default function CreateCard() {
 
   async function clickhandler(){
     try {
-      const response = await fetch('http://localhost:3000/card/add', {
+      const response = await fetch('http://localhost:3001/card/add', {
         method: 'POST',
         body: JSON.stringify({
           name: name,
@@ -33,6 +34,7 @@ export default function CreateCard() {
         setInterests([])
         setLinkedin('')
         setTwitter('')
+        await fetchdata();
       }
 
     } catch (error) {
@@ -64,3 +66,4 @@ export default function CreateCard() {
     </div>
   );
 }
+export default CreateCard;
